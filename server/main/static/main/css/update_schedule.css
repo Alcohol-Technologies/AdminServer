@@ -1,0 +1,90 @@
+body {
+    background: #153243;
+
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+
+.form {
+    background: #C2DFE3;
+    width: 900px;
+    height: 450px;
+    padding: 32px;
+    border-radius: 10px;
+    box-shadow: 0 4px 16px #101619;
+    font-family: 'Bahnschrift';
+}
+.form_input {
+    font-family: 'Bahnschrift';
+}
+
+.form_button {
+    font-family: 'Bahnschrift';
+    padding: 6px;
+    border-radius: 10px;
+    border: 1px solid #555;
+    width: 100px;
+    height: 46px;
+    background: #6DA34D;
+}
+
+
+input[type=file] {
+  width: 350px;
+  max-width: 100%;
+  color: #444;
+  padding: 5px;
+  background: #fff;
+  border-radius: 10px;
+  border: 1px solid #555;
+}
+
+input[type=file]::file-selector-button {
+  margin-right: 20px;
+  border: none;
+  background: #003166;
+  padding: 10px 20px;
+  border-radius: 10px;
+  color: #fff;
+  cursor: pointer;
+  transition: background .2s ease-in-out;
+}
+
+input[type=file]::file-selector-button:hover {
+  background: #0d45a5;
+}
+
+aside {
+    float: left;
+    background: #0A171F;
+    width: 20%;
+    padding: 2.5%;
+    height: 100vh;
+    color: #F4F9E9;
+    border-right: 5px solid #4d4d4d;
+    font-family: 'Bahnschrift';
+    font-size: large;
+}
+
+aside img {
+    width: 150px;
+    height: 146px;
+}
+
+aside ul li {
+    color: #92A9AF;
+    margin-top: 20px;
+    transition: transform .2s ease;
+}
+aside ul li:hover, aside ul a:hover {
+    color: #eb5959;
+    transform: scale(1.01);
+
+}
+

@@ -1,0 +1,31 @@
+body {
+    background: #153243;
+}
+
+aside {
+    float: left;
+    background: #0A171F;
+    width: 20%;
+    padding: 2.5%;
+    height: 100vh;
+    color: #F4F9E9;
+    border-right: 5px solid #4d4d4d;
+    font-family: 'Bahnschrift';
+    font-size: large;
+}
+
+aside img {
+    width: 150px;
+    height: 146px;
+}
+
+aside ul li {
+    color: #92A9AF;
+    margin-top: 20px;
+    transition: transform .2s ease;
+}
+aside ul li:hover, aside ul a:hover {
+    color: #eb5959;
+    transform: scale(1.01);
+
+}
