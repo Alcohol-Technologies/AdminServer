@@ -7,7 +7,7 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Главная страница</title>
-    <link rel="stylesheet" href="{% static 'main/css/update_schedule.css' %}">
+    <link rel="stylesheet" href="{% static 'main/css/success.css' %}">
 </head>
 <body>
     <aside>
@@ -15,20 +15,14 @@
         <h3>Навигация</h3>
         <ul>
             <a href="{% url 'home'%}"><li>Главная</li></a>
-            <a href=""><li>Загрузка расписания</li></a>
+            <a href="{% url 'schedule'%}"><li>Загрузка расписания</li></a>
             <a href=""><li>Просмотр и изменение ролей пользователей</li></a>
         </ul>
 
     </aside>
+    <p>Файл загружен успешно</p>
     <main>
 
-        <form method="POST" enctype="multipart/form-data" class="form">
-            {% csrf_token %}
-            <h1 class="form_title">Загрузка расписания</h1>
-            {{ form }}
-            <!--<input class="form_input" type="file" name="excel_file">-->
-            <button class="form_button" type="submit">Загрузить</button>
-        </form>
 
     </main>
 </body>

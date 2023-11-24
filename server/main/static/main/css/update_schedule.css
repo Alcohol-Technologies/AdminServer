@@ -32,8 +32,12 @@ main {
     width: 100px;
     height: 46px;
     background: #6DA34D;
+    transition: background-color 0.3s;
 }
 
+.form_button:hover {
+    background-color: #E5F77D !important;
+}
 
 input[type=file] {
   width: 350px;
@@ -59,6 +63,7 @@ input[type=file]::file-selector-button {
 input[type=file]::file-selector-button:hover {
   background: #0d45a5;
 }
+
 
 aside {
     float: left;
