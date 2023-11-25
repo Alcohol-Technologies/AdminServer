@@ -2,12 +2,6 @@ body {
     background: #153243;
 }
 
-main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
 aside {
     float: left;
     background: #0A171F;
@@ -33,19 +27,5 @@ aside ul li {
 aside ul li:hover, aside ul a:hover {
     color: #eb5959;
     transform: scale(1.01);
-}
 
-.center-both {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 900px;
-    height: 450px;
-    padding: 32px;
-    border-radius: 10px;
-    box-shadow: 0 4px 16px #101619;
-    font-family: 'Bahnschrift';
-    font-size: 45px;
-    background: #C2DFE3;
 }
-
