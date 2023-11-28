@@ -8,21 +8,35 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Главная страница</title>
     <link rel="stylesheet" href="{% static 'main/css/index.css' %}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="icon" href="{% static 'main/img/favicon.ico'%}">
 </head>
 <body>
     <aside>
         <img src="{% static 'main/img/admin_logo.jpg'%}" alt="logo">
         <h3>Навигация</h3>
         <ul>
-            <a href="{% url 'home'%}"><li>Главная</li></a>
-            <a href="{% url 'schedule'%}"><li>Загрузка расписания</li></a>
-            <a href=""><li>Просмотр и изменение ролей пользователей</li></a>
+            <a href="{% url 'home'%}"><li><i class="bi bi-house-fill"></i> Главная</li></a>
+            <a href="{% url 'schedule'%}"><li><i class="bi bi-cloud-arrow-up-fill"></i> Загрузка расписания</li></a>
+            <a href=""><li><i class="bi bi-pencil-square"></i> Просмотр и изменение ролей пользователей</li></a>
         </ul>
         
     </aside>
     <main>
+        <div class="main_window">
+            <p1>Сервер Администрации</p1>
+            <h1>Добро пожаловать на сервер администрации! <br> Здесь вы найдете все необходимые инструменты и ресурсы
+                для эффективного управления расписанием. Наша команда постоянно работает над добавлением новых функций и улучшением пользовательского опыта,
+                чтобы обеспечить вам максимальное удобство в работе.
+            </h1>
 
+            <h2>
+                Чтобы обновить расписание, перейдите в
+                соответсвующую вкладку и загрузите файл формата .xlsx.
+            </h2>
+            <a href="{% url 'schedule'%}"><li><i class="bi bi-cloud-arrow-up-fill"></i> Загрузка расписания</li></a>
 
+        </div>
     </main>
 </body>
 </html>

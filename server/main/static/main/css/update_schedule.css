@@ -65,7 +65,6 @@ input[type=file]::file-selector-button:hover {
   background: #0d45a5;
 }
 
-
 aside {
     float: left;
     background: #0A171F;
@@ -93,4 +92,13 @@ aside ul li:hover, aside ul a:hover {
     transform: scale(1.01);
 
 }
+.form p1 img {
+    width: 110px;
+    height: 105px;
+}
 
+.form p1 {
+    font-size: 24px;
+    font-weight: normal;
+
+}

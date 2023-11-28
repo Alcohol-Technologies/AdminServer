@@ -3,15 +3,10 @@ from django.http import HttpResponse
 from .forms import UploadForm
 from .excel_reader import parse_xls
 import json
-
+import requests
 
 def index(request):
     return render(request, 'main/index.html')
-
-
-#def update_schedule(request):
-    #return render(request, 'main/update_schedule.html')
-
 
 def update_schedule(request):
     if request.method == 'POST':
@@ -20,8 +15,11 @@ def update_schedule(request):
             # file = form.cleaned_data['file']
             schedule = parse_xls(form.cleaned_data['file'], 0)
 
-            with open("shedule.json", "w") as file:  # открываем файл для записи
-                json.dump(schedule, file, indent=2)
+            json_data = json.dumps(schedule)
+            headers = {'Security-Token': 'application/json'}
+            response = requests.post('https://httpbin.org/post', data=json_data, headers=headers)
+
+            #print(response.json())
 
             return render(request, 'main/success.html')
     else:
