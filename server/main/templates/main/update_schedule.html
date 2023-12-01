@@ -6,7 +6,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Главная страница</title>
+    <title>Загрузка расписания</title>
     <link rel="stylesheet" href="{% static 'main/css/update_schedule.css' %}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 </head>
@@ -17,7 +17,8 @@
         <ul>
             <a href="{% url 'home'%}"><li><i class="bi bi-house-fill"></i> Главная</li></a>
             <a href="{% url 'schedule'%}"><li><i class="bi bi-cloud-arrow-up-fill"></i> Загрузка расписания</li></a>
-            <a href=""><li><i class="bi bi-pencil-square"></i> Просмотр и изменение ролей пользователей</li></a>
+            <a href="{% url 'users'%}"><li><i class="bi bi-pencil-square"></i> Просмотр и изменение ролей
+                пользователей</li></a>
         </ul>
 
     </aside>
@@ -28,13 +29,15 @@
             {{ form }}
             <!--<input class="form_input" type="file" name="excel_file">-->
             <button class="form_button" type="submit">Загрузить</button>
-            <p1>
+            <div class="container">
                 <h1> </h1>
                 <img src="{% static 'main/img/excel_logo.png'%}" alt="xls_logo" align="left">
+                <p>
                 1. Выберите файл <br>
                 2. Нажмите "Загрузить" <br>
                 3. Готово! Файл загружен
-            </p1>
+                </p>
+            </div>
         </form>
 
     </main>

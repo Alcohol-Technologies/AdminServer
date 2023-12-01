@@ -18,7 +18,7 @@
         <ul>
             <a href="{% url 'home'%}"><li><i class="bi bi-house-fill"></i> Главная</li></a>
             <a href="{% url 'schedule'%}"><li><i class="bi bi-cloud-arrow-up-fill"></i> Загрузка расписания</li></a>
-            <a href=""><li><i class="bi bi-pencil-square"></i> Просмотр и изменение ролей пользователей</li></a>
+            <a href="{% url 'users'%}"><li><i class="bi bi-pencil-square"></i> Просмотр и изменение ролей пользователей</li></a>
         </ul>
         
     </aside>
@@ -33,9 +33,12 @@
             <h2>
                 Чтобы обновить расписание, перейдите в
                 соответсвующую вкладку и загрузите файл формата .xlsx.
+                В следующей вкладке можно посмотреть пользователей и изменить их роли.
             </h2>
-            <a href="{% url 'schedule'%}"><li><i class="bi bi-cloud-arrow-up-fill"></i> Загрузка расписания</li></a>
 
+            <a href="{% url 'schedule'%}"><li><i class="bi bi-cloud-arrow-up-fill"></i> Загрузка расписания</li></a>
+            <h1></h1>
+            <a href=""><li><i class="bi bi-pencil-square"></i> Просмотр и изменение ролей пользователей</li></a>
         </div>
     </main>
 </body>

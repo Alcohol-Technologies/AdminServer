@@ -4,9 +4,12 @@ from .forms import UploadForm
 from .excel_reader import parse_xls
 import json
 import requests
+from .users_reader import readUsers
+
 
 def index(request):
     return render(request, 'main/index.html')
+
 
 def update_schedule(request):
     if request.method == 'POST':
@@ -19,10 +22,15 @@ def update_schedule(request):
             headers = {'Security-Token': 'application/json'}
             response = requests.post('https://httpbin.org/post', data=json_data, headers=headers)
 
-            #print(response.json())
+            # print(response.json())
 
             return render(request, 'main/success.html')
     else:
         form = UploadForm()
 
     return render(request, 'main/update_schedule.html', {'form': form})
+
+
+def show_users(request):
+    users = readUsers("main/users_data.json")
+    return render(request, "main/show_users.html", context={"users": users})

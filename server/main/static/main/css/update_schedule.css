@@ -31,7 +31,7 @@ main {
     border: 1px solid #555;
     width: 100px;
     height: 46px;
-    background: #6DA34D;
+    background: #36AF47;
     transition: background-color 0.3s;
 }
 
@@ -92,13 +92,20 @@ aside ul li:hover, aside ul a:hover {
     transform: scale(1.01);
 
 }
-.form p1 img {
+.form div img {
     width: 110px;
     height: 105px;
+
+    float: left;
+    margin-right: 15px;
+    margin-bottom: 15px;
+
 }
 
-.form p1 {
+.container{
+    display: flex;
     font-size: 24px;
     font-weight: normal;
-
+    clear: right;
+    align-items: center;
 }
